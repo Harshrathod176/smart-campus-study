@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home — Smart Campus Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">SC</span>
+                <span class="brand-text">
+                    <strong>Smart Campus Study</strong>
+                    <small>UMS + IoT · BCA Field Work</small>
+                </span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="ums.html">Modules</a></li>
+                <li><a href="field-visit.html">Field Visit</a></li>
+                <li><a href="findings.html">Findings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="section">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <span class="badge badge-planned">Second-Year BCA Field Work Project</span>
+                    <div>
+                        <h1>University Management System + IoT</h1>
+                        <p class="hero-subtitle">Smart Campus Study</p>
+                    </div>
+                    <p class="lead">Studying how university software, connected devices, smart facilities and campus data can work together to support a smarter campus.</p>
+                    <div class="hero-actions">
+                        <a href="project.html" class="btn btn-primary">Explore Project</a>
+                        <a href="field-visit.html" class="btn btn-secondary">View Field Visit</a>
+                    </div>
+                    <div class="notice notice-white">
+                        <span class="badge badge-observed">Visit completed</span>
+                        <p>Field visit to <strong>Vishwakarma University</strong>, Kondhwa Budruk, Pune on <strong>16 October 2026</strong>. Findings combine what we saw on campus with information published on the university's official website.</p>
+                    </div>
+                </div>
+
+                <!-- How the campus connects -->
+                <div class="card connect-card">
+                    <div class="card-top">
+                        <h2>How the campus connects</h2>
+                        <span class="badge badge-example">Our proposal</span>
+                    </div>
+                    <div class="connect-step"><span class="circle sm">1</span><span class="step-name">Students / Staff</span></div>
+                    <div class="connect-line"></div>
+                    <div class="connect-step"><span class="circle sm">2</span><span class="step-name">UMS / ERP</span><span class="tag-num c-ums">01</span></div>
+                    <div class="connect-line"></div>
+                    <div class="connect-step"><span class="circle sm">3</span><span class="step-name">Campus network / platform</span><span class="tag-num c-net">04</span></div>
+                    <div class="connect-line"></div>
+                    <div class="connect-step"><span class="circle sm">4</span><span class="step-name">IoT devices &amp; smart facilities</span><span class="connect-tags"><span class="tag-num c-iot">02</span><span class="tag-num c-fac">03</span></span></div>
+                    <div class="connect-line"></div>
+                    <div class="connect-step"><span class="circle sm">5</span><span class="step-name">Dashboard / alerts</span><span class="tag-num c-net">04</span></div>
+                    <div class="connect-line"></div>
+                    <div class="connect-step"><span class="circle sm">6</span><span class="step-name">Administrative action</span></div>
+                    <a href="project.html#architecture" class="card-link">See the full architecture →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Four Modules -->
+        <section class="section section-alt">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="eyebrow">Project overview</span>
+                    <h2>Four modules, one connected campus</h2>
+                    <p class="lead">Each team member studies one part of the campus. Together, the four modules show how a physical action on campus becomes data, a record and finally a decision.</p>
+                </div>
+                <div class="grid grid-4">
+                    <a href="ums.html" class="card">
+                        <div class="card-top"><span class="mod-num c-ums">01</span><span class="badge c-ums">UMS / ERP</span></div>
+                        <h3>UMS / ERP Integration</h3>
+                        <p class="grow">How attendance, access and other campus activity become records inside the university's software.</p>
+                        <span class="card-meta">Harshvardhan Rathod · BC2047</span>
+                        <span class="card-link">Read module →</span>
+                    </a>
+                    <a href="iot.html" class="card">
+                        <div class="card-top"><span class="mod-num c-iot">02</span><span class="badge c-iot">IoT Hardware</span></div>
+                        <h3>IoT Hardware</h3>
+                        <p class="grow">The readers, sensors, meters and gateways that capture campus data, and how they communicate.</p>
+                        <span class="card-meta">Dinesh Choudhary · BC2009</span>
+                        <span class="card-link">Read module →</span>
+                    </a>
+                    <a href="facilities.html" class="card">
+                        <div class="card-top"><span class="mod-num c-fac">03</span><span class="badge c-fac">Smart Facilities</span></div>
+                        <h3>Smart Facilities</h3>
+                        <p class="grow">How classrooms, lighting, AC, water and parking could be monitored or automated, with staff still in control.</p>
+                        <span class="card-meta">Dhiraj Mourya · BC2038</span>
+                        <span class="card-link">Read module →</span>
+                    </a>
+                    <a href="network.html" class="card">
+                        <div class="card-top"><span class="mod-num c-net">04</span><span class="badge c-net">Network / Dashboard</span></div>
+                        <h3>Network / Dashboard</h3>
+                        <p class="grow">A high-level look at connectivity, user roles, monitoring and how campus data reaches a dashboard.</p>
+                        <span class="card-meta">Aaryan Ghadge · BC2019</span>
+                        <span class="card-link">Read module →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Study Approach -->
+        <section class="section">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="eyebrow">Study approach</span>
+                    <h2>How we will study the campus</h2>
+                    <p class="lead">The same four steps guided every module, so all four parts of the study can be compared.</p>
+                </div>
+                <div class="grid grid-4">
+                    <div class="step">
+                        <div class="step-head"><span class="circle">1</span><span class="step-line"></span></div>
+                        <h4>Observe</h4>
+                        <p>Walked the campus entrance, roads and Eco Campus area and took photographs.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-head"><span class="circle">2</span><span class="step-line"></span></div>
+                        <h4>Ask</h4>
+                        <p>Checked our questions against the university's official website.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-head"><span class="circle">3</span><span class="step-line"></span></div>
+                        <h4>Map</h4>
+                        <p>Mapped how data could move between devices, network and the UMS / ERP.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-head"><span class="circle blue">4</span></div>
+                        <h4>Suggest</h4>
+                        <p>Proposed small, practical improvements based on what we found.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reading Guide -->
+        <section class="section section-alt">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="eyebrow">Reading guide</span>
+                    <h2>How to read this website</h2>
+                    <p class="lead">Every block on this site carries one of three labels, so it is always clear where a piece of information comes from.</p>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card">
+                        <span><span class="badge badge-observed">Seen on visit</span></span>
+                        <h3>Our field observations</h3>
+                        <p>Things our team saw and photographed at Vishwakarma University on 16 October 2026.</p>
+                    </article>
+                    <article class="card">
+                        <span><span class="badge badge-web">From VU website</span></span>
+                        <h3>Official university information</h3>
+                        <p>Services and facilities published on vupune.ac.in, with a link to each page.</p>
+                    </article>
+                    <article class="card">
+                        <span><span class="badge badge-example">Our proposal</span></span>
+                        <h3>Our design ideas</h3>
+                        <p>Flows, diagrams and improvements we propose. They are not the university's internal systems.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-brand">
+                        <span class="brand-mark light">SC</span>
+                        <span>University Management System + IoT: Smart Campus Study</span>
+                    </div>
+                    <p>Second-Year BCA field-work project. Field visit to Vishwakarma University, Kondhwa Budruk, Pune on 16 October 2026.</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">Project guide</span>
+                    <p>Rohini M. Kshirsagar</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">College</span>
+                    <p>Jayawantrao Sawant Institute of Management &amp; Research (JSIMR), Pune</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">Academic year</span>
+                    <p>2026–27 · Batch 2025–2028</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>Harshvardhan Rathod · Dhiraj Mourya · Aaryan Ghadge · Dinesh Choudhary</span>
+                <span>Thank you</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
