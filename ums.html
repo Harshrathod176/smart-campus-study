@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 UMS / ERP Integration — Smart Campus Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">SC</span>
+                <span class="brand-text">
+                    <strong>Smart Campus Study</strong>
+                    <small>UMS + IoT · BCA Field Work</small>
+                </span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="ums.html" class="active" aria-current="page">Modules</a></li>
+                <li><a href="field-visit.html">Field Visit</a></li>
+                <li><a href="findings.html">Findings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Module Header -->
+        <section class="page-hero module-hero">
+            <div class="container">
+                <!-- Module Navigation -->
+                <nav class="module-tabs" aria-label="Modules">
+                    <a href="ums.html" class="module-tab active" aria-current="page"><span class="mod-num sm c-ums">01</span>UMS / ERP</a>
+                    <a href="iot.html" class="module-tab"><span class="mod-num sm c-iot">02</span>IoT Hardware</a>
+                    <a href="facilities.html" class="module-tab"><span class="mod-num sm c-fac">03</span>Smart Facilities</a>
+                    <a href="network.html" class="module-tab"><span class="mod-num sm c-net">04</span>Network / Dashboard</a>
+                </nav>
+                <div class="module-intro">
+                    <span class="mod-num lg c-ums">01</span>
+                    <div class="stack-sm">
+                        <span class="small muted">Module by <strong>Harshvardhan Rathod</strong> · BC2047</span>
+                        <h1 class="page-title">IoT integration with the University Management System</h1>
+                        <p class="lead">How student services at Vishwakarma University are organised digitally, and how campus events, such as a card tap or a gate entry, could become authorised records in a UMS / ERP.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What is a UMS / ERP + VU services -->
+        <section class="section">
+            <div class="container split split-even">
+                <div class="stack-sm" style="gap: 16px;">
+                    <span><span class="badge badge-observed">Visit + website review</span></span>
+                    <h2>What is a UMS / ERP?</h2>
+                    <p>A University Management System, often called an ERP, is the central software a university uses for admissions, attendance, notices, examinations, results, certificates and service requests.</p>
+                    <p>At Vishwakarma University we saw the campus setting on 16 October 2026 and studied the student-facing services published on the official website. These show what the university's system has to support every day.</p>
+                    <h4 style="margin-top: 8px;">Questions for an authorised follow-up</h4>
+                    <ul class="arrow-list">
+                        <li>Which system maintains the student identifier?</li>
+                        <li>How is an attendance record matched to a student?</li>
+                        <li>Who may correct an incorrect event?</li>
+                        <li>How are duplicate or offline device submissions handled?</li>
+                    </ul>
+                </div>
+
+                <!-- Student services published by VU -->
+                <div class="stack-sm" style="gap: 16px;">
+                    <div class="card-top" style="flex-wrap: wrap;"><h3>Student services at VU</h3><span class="badge badge-web">From VU website</span></div>
+                    <div class="grid grid-2" style="gap: 12px;">
+                        <div class="simple-box"><strong>VUNET registration</strong><span>Identity-based access to services</span></div>
+                        <div class="simple-box"><strong>ERP</strong><span>Bonafide certificate application</span></div>
+                        <div class="simple-box"><strong>Academic calendar</strong><span>Semester schedule</span></div>
+                        <div class="simple-box"><strong>Circulars &amp; notices</strong><span>Student communication</span></div>
+                        <div class="simple-box"><strong>Results</strong><span>Examination outcomes</span></div>
+                        <div class="simple-box"><strong>Standard forms</strong><span>Certificates, ID card, no dues</span></div>
+                        <div class="simple-box"><strong>Student Facilitation Centre</strong><span>Registration numbers, email IDs</span></div>
+                        <div class="simple-box"><strong>Grievance portal</strong><span>Student complaints</span></div>
+                    </div>
+                    <span class="source">Sources: <a href="https://www.vupune.ac.in/" target="_blank" rel="noopener">vupune.ac.in</a>, <a href="https://vupune.ac.in/facilitation/standard-forms" target="_blank" rel="noopener">Standard Forms</a>, <a href="https://www.vupune.ac.in/facilitation/services-by-sfc" target="_blank" rel="noopener">Student Facilitation Centre</a></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proposed Data Flow -->
+        <section class="section section-alt">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="badge badge-example">Our proposal</span>
+                    <h2>How a campus action could become a digital record</h2>
+                    <p class="lead">Harshvardhan's proposed IoT–UMS flow. This is a student design, not VU's verified internal architecture.</p>
+                </div>
+                <div class="flow">
+                    <div class="flow-step"><span class="circle sm">1</span><h4>Student identity</h4><span class="small">A unique student ID or enrolment number</span></div>
+                    <span class="flow-arrow" aria-hidden="true">→</span>
+                    <div class="flow-step"><span class="circle sm">2</span><h4>IoT event</h4><span class="small">A reader sends device ID, time and student reference</span></div>
+                    <span class="flow-arrow" aria-hidden="true">→</span>
+                    <div class="flow-step"><span class="circle sm">3</span><h4>Validation</h4><span class="small">Check identity, remove duplicates, apply rules</span></div>
+                    <span class="flow-arrow" aria-hidden="true">→</span>
+                    <div class="flow-step"><span class="circle sm">4</span><h4>UMS / ERP</h4><span class="small">Authorised record is saved with a timestamp</span></div>
+                    <span class="flow-arrow" aria-hidden="true">→</span>
+                    <div class="flow-step dark"><span class="circle sm white">5</span><h4>Administrative use</h4><span class="small">Status updates, verification and reports</span></div>
+                </div>
+                <div class="grid grid-2 gap-sm">
+                    <div class="card compact flat"><h4>Synchronisation</h4><p>A delayed device event should keep its original timestamp and never silently overwrite an earlier verified entry.</p></div>
+                    <div class="card compact flat"><h4>Repeated data entry</h4><p>One student identity should be reused across every service, so a change of contact details is made once, not in every request.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Evidence and Findings -->
+        <section class="section">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="eyebrow">Evidence and findings</span>
+                    <h2>What the visit and website showed</h2>
+                </div>
+                <div class="split split-even">
+                    <figure>
+                        <img class="photo tall" src="images/field-visit/entrance-road.jpg" alt="Campus road leading to a white Vishwakarma University building with students walking">
+                        <figcaption><span class="caption-text">Campus road and VU academic building, 16 October 2026. No internal ERP screens were photographed.</span></figcaption>
+                    </figure>
+                    <div class="grid grid-2 gap-sm">
+                        <div class="card compact"><div class="card-top"><h4>UMS services found</h4></div><span><span class="badge badge-web">From VU website</span></span><p>VUNET, ERP, academic calendar, circulars, results, standard forms and the Student Facilitation Centre.</p></div>
+                        <div class="card compact"><h4>Real integration example</h4><span><span class="badge badge-web">From VU website</span></span><p>"Application for Bonafide Certificate is now available on your ERP": a request moved from a paper form to the ERP.</p></div>
+                        <div class="card compact"><h4>Problem observed</h4><span><span class="badge badge-web">From VU website</span></span><p>Other requests (migration, transfer, character certificate, LOR, duplicate ID card, no dues) are still downloadable forms.</p></div>
+                        <div class="card compact"><h4>Improvement suggestion</h4><span><span class="badge badge-example">Our proposal</span></span><p>A student dashboard linking notices, forms and request status, tested with fictional records before any real integration.</p></div>
+                    </div>
+                </div>
+
+                <!-- Privacy notice -->
+                <div class="notice notice-blue">
+                    <span class="badge" style="background: var(--white); color: var(--blue);">Privacy</span>
+                    <p>We did not access the ERP or any student records. Everything on this page comes from public pages and our own campus observation. The proposed design shares only the minimum data each role needs.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-brand">
+                        <span class="brand-mark light">SC</span>
+                        <span>University Management System + IoT: Smart Campus Study</span>
+                    </div>
+                    <p>Second-Year BCA field-work project. Field visit to Vishwakarma University, Kondhwa Budruk, Pune on 16 October 2026.</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">Project guide</span>
+                    <p>Rohini M. Kshirsagar</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">College</span>
+                    <p>Jayawantrao Sawant Institute of Management &amp; Research (JSIMR), Pune</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">Academic year</span>
+                    <p>2026–27 · Batch 2025–2028</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>Harshvardhan Rathod · Dhiraj Mourya · Aaryan Ghadge · Dinesh Choudhary</span>
+                <span>Thank you</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

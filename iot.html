@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 IoT Hardware — Smart Campus Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">SC</span>
+                <span class="brand-text">
+                    <strong>Smart Campus Study</strong>
+                    <small>UMS + IoT · BCA Field Work</small>
+                </span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="ums.html" class="active" aria-current="page">Modules</a></li>
+                <li><a href="field-visit.html">Field Visit</a></li>
+                <li><a href="findings.html">Findings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Module Header -->
+        <section class="page-hero module-hero">
+            <div class="container">
+                <!-- Module Navigation -->
+                <nav class="module-tabs" aria-label="Modules">
+                    <a href="ums.html" class="module-tab"><span class="mod-num sm c-ums">01</span>UMS / ERP</a>
+                    <a href="iot.html" class="module-tab active" aria-current="page"><span class="mod-num sm c-iot">02</span>IoT Hardware</a>
+                    <a href="facilities.html" class="module-tab"><span class="mod-num sm c-fac">03</span>Smart Facilities</a>
+                    <a href="network.html" class="module-tab"><span class="mod-num sm c-net">04</span>Network / Dashboard</a>
+                </nav>
+                <div class="module-intro">
+                    <span class="mod-num lg c-iot">02</span>
+                    <div class="stack-sm">
+                        <span class="small muted">Module by <strong>Dinesh Choudhary</strong> · BC2009</span>
+                        <h1 class="page-title">The physical layer of a smart campus</h1>
+                        <p class="lead">IoT hardware senses identity, temperature, movement or energy use and turns it into data. Dinesh studied readers, sensors, meters, controllers and gateways, and the path that carries a physical event to an application.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Device to Platform -->
+        <section class="section">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="badge badge-example">Our proposal</span>
+                    <h2>From device to platform</h2>
+                    <p class="lead">Dinesh's proposed device-to-platform model. It is a student design, not VU's installed system.</p>
+                </div>
+                <div class="flow">
+                    <div class="flow-step"><span class="circle sm">1</span><h4>Sensor / reader</h4><span class="small">Measures a condition or reads a card</span></div>
+                    <span class="flow-arrow" aria-hidden="true">→</span>
+                    <div class="flow-step"><span class="circle sm">2</span><h4>Controller</h4><span class="small">Identifies and formats the data</span></div>
+                    <span class="flow-arrow" aria-hidden="true">→</span>
+                    <div class="flow-step"><span class="circle sm">3</span><h4>Gateway</h4><span class="small">Sends it across the network</span></div>
+                    <span class="flow-arrow" aria-hidden="true">→</span>
+                    <div class="flow-step dark"><span class="circle sm white">4</span><h4>Application</h4><span class="small">Shows the result or a fault</span></div>
+                </div>
+                <div class="grid grid-4 gap-sm">
+                    <div class="card compact flat"><h4>Event ≠ delivery</h4><p>Detecting an event is not the same as delivering it.</p></div>
+                    <div class="card compact flat"><h4>ID + timestamp</h4><p>Every reading needs a device ID and a timestamp.</p></div>
+                    <div class="card compact flat"><h4>"Unavailable", not zero</h4><p>A dead sensor should show "unavailable", never a false zero.</p></div>
+                    <div class="card compact flat"><h4>Real limits</h4><p>Power, placement and connectivity limit real devices.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Device Inventory -->
+        <section class="section section-alt">
+            <div class="container stack">
+                <div class="card-top" style="flex-wrap: wrap; align-items: flex-end;">
+                    <div class="section-header">
+                        <span class="eyebrow">Device inventory</span>
+                        <h2>Devices we documented at VU</h2>
+                        <p class="lead">Devices we saw on campus or that VU's website lists. Details a visitor cannot see are marked "Not visible". No internal IoT equipment was inspected.</p>
+                    </div>
+                    <span class="badge badge-observed" style="background: var(--white);">4 devices documented</span>
+                </div>
+                <div class="grid grid-4 gap-sm">
+
+                    <article class="card device-card">
+                        <img class="photo" style="border: none; border-radius: 0; height: 200px; object-position: center 30%;" src="images/field-visit/vending-machine.jpg" alt="Smart vending machine with a touchscreen panel">
+                        <div class="device-body">
+                            <div><h3>Smart vending machine</h3><span class="small muted">Touchscreen snack and drink machine.</span></div>
+                            <dl class="spec-list">
+                                <div><dt>Location</dt><dd>Next to a building entrance</dd></div>
+                                <div><dt>Senses / controls</dt><dd>Touch orders; dispenses items</dd></div>
+                                <div><dt>Data generated</dt><dd>Orders, payments, stock</dd></div>
+                                <div><dt>Communication</dt><dd>External antenna on top</dd></div>
+                                <div><dt>If it fails?</dt><dd>Handwritten refund number</dd></div>
+                            </dl>
+                            <span class="badge badge-observed">Seen on visit</span>
+                        </div>
+                    </article>
+
+                    <article class="card device-card">
+                        <img class="photo" style="border: none; border-radius: 0; height: 200px;" src="images/field-visit/cctv-camera.jpg" alt="White dome CCTV camera above a building entrance">
+                        <div class="device-body">
+                            <div><h3>CCTV dome camera</h3><span class="small muted">Security camera at an entrance.</span></div>
+                            <dl class="spec-list">
+                                <div><dt>Location</dt><dd>Above a building entrance</dd></div>
+                                <div><dt>Senses / controls</dt><dd>Video of the entrance</dd></div>
+                                <div><dt>Data generated</dt><dd>Video footage</dd></div>
+                                <div><dt>Communication</dt><dd>Likely wired (not traced)</dd></div>
+                                <div><dt>If it fails?</dt><dd>Not visible to us</dd></div>
+                            </dl>
+                            <span class="badge badge-observed">Seen on visit</span>
+                        </div>
+                    </article>
+
+                    <article class="card device-card">
+                        <div class="device-photo">
+                            <div class="card-top">Library<span class="badge badge-web" style="font-size: 11px; padding: 3px 8px;">VU website</span></div>
+                            <span class="small">Not photographed. Listed on the VU Library page.</span>
+                        </div>
+                        <div class="device-body">
+                            <div><h3>Biometric entry / exit</h3><span class="small muted">"Bio-metric Entry and Exit for library users."</span></div>
+                            <dl class="spec-list">
+                                <div><dt>Location</dt><dd>University library</dd></div>
+                                <div><dt>Senses / controls</dt><dd>Identity of library users</dd></div>
+                                <div><dt>Data generated</dt><dd>Entry and exit events</dd></div>
+                                <div><dt>Communication</dt><dd>Not disclosed / Not available</dd></div>
+                                <div><dt>If it fails?</dt><dd>Not disclosed / Not available</dd></div>
+                            </dl>
+                            <span class="badge badge-web">From VU website</span>
+                        </div>
+                    </article>
+
+                    <article class="card device-card">
+                        <div class="device-photo">
+                            <div class="card-top">Power<span class="badge badge-web" style="font-size: 11px; padding: 3px 8px;">VU website</span></div>
+                            <span class="small">Not photographed. Listed on the Life@VU page.</span>
+                        </div>
+                        <div class="device-body">
+                            <div><h3>Backup generator</h3><span class="small muted">Power support for campus buildings.</span></div>
+                            <dl class="spec-list">
+                                <div><dt>Location</dt><dd>Not visible</dd></div>
+                                <div><dt>Senses / controls</dt><dd>Power during outages</dd></div>
+                                <div><dt>Data generated</dt><dd>Not visible</dd></div>
+                                <div><dt>Communication</dt><dd>Not disclosed / Not available</dd></div>
+                                <div><dt>If it fails?</dt><dd>Backup power is lost</dd></div>
+                            </dl>
+                            <span class="badge badge-web">From VU website</span>
+                        </div>
+                    </article>
+
+                </div>
+                <span class="source">Sources: our photographs of 16 October 2026, <a href="https://www.vupune.ac.in/academicss/library" target="_blank" rel="noopener">VU Library</a>, <a href="https://www.vupune.ac.in/index.php/life-vu" target="_blank" rel="noopener">Life@VU</a></span>
+            </div>
+        </section>
+
+        <!-- Device Categories Studied + Data Fields -->
+        <section class="section">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="badge badge-example">Our study</span>
+                    <h2>Device categories studied</h2>
+                    <p class="lead">Academic examples of campus hardware. These are not verified VU installations; checking a particular reader or sensor would need authorised technical access.</p>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Device / component</th><th>Study example</th><th>Technical consideration</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="role">RFID reader</td><td>Credential detection</td><td>Interface, read range and privacy</td></tr>
+                            <tr><td class="role">Biometric reader</td><td>Identity event</td><td>Sensitive data and permissions</td></tr>
+                            <tr><td class="role">Temperature sensor</td><td>Environmental reading</td><td>Units and measurement accuracy</td></tr>
+                            <tr><td class="role">Occupancy sensor</td><td>Motion or room-use signal</td><td>False triggers and mounting</td></tr>
+                            <tr><td class="role">Smart energy meter</td><td>Consumption reading</td><td>Power, safe installation and units</td></tr>
+                            <tr><td class="role">Microcontroller</td><td>Local input processing</td><td>Interfaces and limited resources</td></tr>
+                            <tr><td class="role">Gateway</td><td>Collection and forwarding</td><td>Connectivity and device management</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="split split-even">
+                    <article class="card">
+                        <div class="card-top" style="flex-wrap: wrap;"><h3>Proposed device data fields</h3><span class="badge badge-example">Our proposal</span></div>
+                        <ul class="fact-list">
+                            <li><strong>Device type:</strong> RFID reader, sensor or meter</li>
+                            <li><strong>Location:</strong> room, building or area</li>
+                            <li><strong>Reading / event:</strong> measured value or detection</li>
+                            <li><strong>Timestamp:</strong> when the data was produced</li>
+                            <li><strong>Device status:</strong> online, disconnected or error</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-top" style="flex-wrap: wrap;"><h3>When a device fails</h3><span class="badge badge-example">Our proposal</span></div>
+                        <ol class="numbered-list" style="margin: 0; padding: 0; list-style: none;">
+                            <li><span class="circle sm">1</span><p>Check device power and input</p></li>
+                            <li><span class="circle sm">2</span><p>Check local controller communication</p></li>
+                            <li><span class="circle sm">3</span><p>Check gateway transfer</p></li>
+                            <li><span class="circle sm">4</span><p>Confirm the application received the event</p></li>
+                        </ol>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Findings and Suggestions -->
+        <section class="section section-alt">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="eyebrow">Findings and suggestions</span>
+                    <h2>From finding to improvement</h2>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>What we found</th><th>What we suggest</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Each sensor serves a different purpose</td><td>Choose devices by purpose, power and accuracy</td></tr>
+                            <tr><td>Hardware needs a clear identity</td><td>Keep a device list with location and last-seen time</td></tr>
+                            <tr><td>Controllers process local inputs</td><td>Document interfaces and safe behaviour</td></tr>
+                            <tr><td>Faults can hide in the sensor, controller or gateway</td><td>Test the data path one stage at a time</td></tr>
+                            <tr><td>Identity data is sensitive</td><td>Use dummy credentials in demos, never real biometrics</td></tr>
+                            <tr><td>Devices require maintenance</td><td>Plan checks for power, cables and readings</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-brand">
+                        <span class="brand-mark light">SC</span>
+                        <span>University Management System + IoT: Smart Campus Study</span>
+                    </div>
+                    <p>Second-Year BCA field-work project. Field visit to Vishwakarma University, Kondhwa Budruk, Pune on 16 October 2026.</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">Project guide</span>
+                    <p>Rohini M. Kshirsagar</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">College</span>
+                    <p>Jayawantrao Sawant Institute of Management &amp; Research (JSIMR), Pune</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">Academic year</span>
+                    <p>2026–27 · Batch 2025–2028</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>Harshvardhan Rathod · Dhiraj Mourya · Aaryan Ghadge · Dinesh Choudhary</span>
+                <span>Thank you</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
