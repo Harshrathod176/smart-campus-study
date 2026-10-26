@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 Network / Dashboard — Smart Campus Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">SC</span>
+                <span class="brand-text">
+                    <strong>Smart Campus Study</strong>
+                    <small>UMS + IoT · BCA Field Work</small>
+                </span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="ums.html" class="active" aria-current="page">Modules</a></li>
+                <li><a href="field-visit.html">Field Visit</a></li>
+                <li><a href="findings.html">Findings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Module Header -->
+        <section class="page-hero module-hero">
+            <div class="container">
+                <!-- Module Navigation -->
+                <nav class="module-tabs" aria-label="Modules">
+                    <a href="ums.html" class="module-tab"><span class="mod-num sm c-ums">01</span>UMS / ERP</a>
+                    <a href="iot.html" class="module-tab"><span class="mod-num sm c-iot">02</span>IoT Hardware</a>
+                    <a href="facilities.html" class="module-tab"><span class="mod-num sm c-fac">03</span>Smart Facilities</a>
+                    <a href="network.html" class="module-tab active" aria-current="page"><span class="mod-num sm c-net">04</span>Network / Dashboard</a>
+                </nav>
+                <div class="module-intro">
+                    <span class="mod-num lg c-net">04</span>
+                    <div class="stack-sm">
+                        <span class="small muted">Module by <strong>Aaryan Ghadge</strong> · BC2019</span>
+                        <h1 class="page-title">Network security analytics</h1>
+                        <p class="lead">Keeping campus data safe and available. Portals, notices, results and IoT devices all depend on the campus network. This module looks at authentication, user roles, logging, backups and monitoring at a safe, high level.</p>
+                    </div>
+                </div>
+                <div class="notice notice-white">
+                    <span class="badge c-net">Safe scope</span>
+                    <p>We did not inspect routers, authentication servers, internal backups or private logs, and we recorded no passwords, IP addresses or configurations. All monitoring examples use fictional data.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Three Study Areas -->
+        <section class="section">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="badge badge-observed">Visit + website review</span>
+                    <h2>What we found at VU</h2>
+                    <p class="lead">From the campus visit and VU's published library page and IT policies.</p>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card">
+                        <span class="circle">1</span>
+                        <h3>Connectivity</h3>
+                        <ul class="fact-list">
+                            <li>The library has Wi-Fi, internet access and a video-conferencing facility.</li>
+                            <li>Wi-Fi users get a username and password from the IT Department.</li>
+                            <li>Wi-Fi sessions end automatically after three hours.</li>
+                        </ul>
+                        <div class="chip-list"><span class="badge badge-web">VU website</span></div>
+                    </article>
+                    <article class="card">
+                        <span class="circle">2</span>
+                        <h3>Access and roles</h3>
+                        <ul class="fact-list">
+                            <li>Passwords must not be shared, written down or sent by email or chat.</li>
+                            <li>Minimum 8 characters for users and 10 for administrators. User passwords change every 180 days.</li>
+                            <li>Separate sign-ins for VUNET, the ERP, admissions and grievances.</li>
+                        </ul>
+                        <div class="chip-list"><span class="badge badge-web">VU website</span></div>
+                    </article>
+                    <article class="card">
+                        <span class="circle">3</span>
+                        <h3>Monitoring</h3>
+                        <ul class="fact-list">
+                            <li>A CCTV dome camera above a building entrance.</li>
+                            <li>VU's Wi-Fi policy says IT "continuously" sweeps the wireless network for rogue access points.</li>
+                            <li>Logs, backups and recovery steps were not visible to us.</li>
+                        </ul>
+                        <div class="chip-list"><span class="badge badge-observed">Seen on visit</span><span class="badge badge-web">VU website</span></div>
+                    </article>
+                </div>
+                <span class="source">Sources: <a href="https://www.vupune.ac.in/academicss/library" target="_blank" rel="noopener">VU Library</a>, <a href="https://www.vupune.ac.in/images/IT-Policies/VU_Wi-Fi_Use_Policy_Ver_10.pdf" target="_blank" rel="noopener">VU Wi-Fi Use Policy</a>, <a href="https://www.vupune.ac.in/images/IT-Policies/VU_Password_Management_Policy_Ver_10.pdf" target="_blank" rel="noopener">VU Password Management Policy</a></span>
+
+                <!-- Public vs protected services -->
+                <div class="stack-sm" style="gap: 16px;">
+                    <div class="card-top" style="justify-content: flex-start; flex-wrap: wrap;"><h3>Public and protected services</h3><span class="badge badge-web">From VU website</span></div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr><th>Service</th><th>Example at VU</th><th>Security need</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="role">Public website</td><td>Notices, circulars, academic calendar</td><td>Readable without login; protect against unauthorised edits</td></tr>
+                                <tr><td class="role">Library services</td><td>Wi-Fi, Web-OPAC catalogue, e-journals, digital library</td><td>Reliable availability; access suited to each resource</td></tr>
+                                <tr><td class="role">Student portal / ERP</td><td>VUNET registration; bonafide certificate on the ERP</td><td>Login, role permissions and private student records</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proposed Monitoring Model -->
+        <section class="section section-alt">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="badge badge-example">Our proposal</span>
+                    <h2>Proposed safe monitoring model</h2>
+                    <p class="lead">Aaryan's monitoring and alert lifecycle, using fictional data. It is not VU's actual network.</p>
+                </div>
+                <div class="flow">
+                    <div class="flow-step"><span class="circle sm">1</span><h4>Service event</h4><span class="small">An authorised request from an application</span></div>
+                    <span class="flow-arrow" aria-hidden="true">→</span>
+                    <div class="flow-step"><span class="circle sm">2</span><h4>Status log</h4><span class="small">A limited, timestamped record</span></div>
+                    <span class="flow-arrow" aria-hidden="true">→</span>
+                    <div class="flow-step"><span class="circle sm">3</span><h4>Rule check</h4><span class="small">A simple rule evaluates the event</span></div>
+                    <span class="flow-arrow" aria-hidden="true">→</span>
+                    <div class="flow-step dark"><span class="circle sm white">4</span><h4>Alert</h4><span class="small">Shown only to the responsible user</span></div>
+                </div>
+
+                <!-- Proposed dashboard -->
+                <div class="dashboard">
+                    <div class="dashboard-head">
+                        <div><strong>Service status dashboard</strong><span>Proposed layout · fictional data only</span></div>
+                        <span class="badge badge-dark">Not live</span>
+                    </div>
+                    <div class="dashboard-body">
+                        <div class="grid grid-4 gap-sm">
+                            <div class="metric"><span class="label">Actor role</span><span class="note" style="font-style: normal; color: var(--text);">Student, staff or administrator, with no personal identifiers</span><span class="badge c-net">Log field</span></div>
+                            <div class="metric"><span class="label">Event type</span><span class="note" style="font-style: normal; color: var(--text);">Login success, denied access or service warning</span><span class="badge c-net">Log field</span></div>
+                            <div class="metric"><span class="label">Availability status</span><span class="note" style="font-style: normal; color: var(--text);">Online, delayed or unavailable, with a timestamp</span><span class="badge c-net">Log field</span></div>
+                            <div class="metric"><span class="label">Alert owner</span><span class="note" style="font-style: normal; color: var(--text);">The authorised support role that acknowledges it</span><span class="badge c-net">Log field</span></div>
+                        </div>
+                        <p class="small muted">Design rule: the dashboard must tell a denied login apart from a connection problem or an application outage. These look the same to a user but need different responses.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Findings and Suggestions -->
+        <section class="section">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="eyebrow">Findings and suggestions</span>
+                    <h2>From finding to improvement</h2>
+                </div>
+                <div class="split split-even">
+                    <div class="table-wrap" style="align-self: start;">
+                        <table style="min-width: 480px;">
+                            <thead>
+                                <tr><th>What we found</th><th>What we suggest</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Services need different permissions</td><td>Role-based views for public and private data</td></tr>
+                                <tr><td>Failures should be easy to identify</td><td>Show service status with event timestamps</td></tr>
+                                <tr><td>Logs may contain sensitive data</td><td>Keep limited, role-restricted event records</td></tr>
+                                <tr><td>IoT events need controlled integration</td><td>Accept only permitted, validated messages</td></tr>
+                                <tr><td>Recovery needs a clear process</td><td>Document who handles backup and restore</td></tr>
+                                <tr><td>VU's internal topology is unknown</td><td>Avoid unsupported claims; seek permission for follow-up</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <figure>
+                        <img class="photo tall" src="images/field-visit/cctv-camera.jpg" alt="White dome CCTV camera above a building entrance">
+                        <figcaption><span class="caption-text">CCTV dome camera at a VU building entrance, 16 October 2026.</span></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-brand">
+                        <span class="brand-mark light">SC</span>
+                        <span>University Management System + IoT: Smart Campus Study</span>
+                    </div>
+                    <p>Second-Year BCA field-work project. Field visit to Vishwakarma University, Kondhwa Budruk, Pune on 16 October 2026.</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">Project guide</span>
+                    <p>Rohini M. Kshirsagar</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">College</span>
+                    <p>Jayawantrao Sawant Institute of Management &amp; Research (JSIMR), Pune</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">Academic year</span>
+                    <p>2026–27 · Batch 2025–2028</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>Harshvardhan Rathod · Dhiraj Mourya · Aaryan Ghadge · Dinesh Choudhary</span>
+                <span>Thank you</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 Smart Facilities — Smart Campus Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">SC</span>
+                <span class="brand-text">
+                    <strong>Smart Campus Study</strong>
+                    <small>UMS + IoT · BCA Field Work</small>
+                </span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="ums.html" class="active" aria-current="page">Modules</a></li>
+                <li><a href="field-visit.html">Field Visit</a></li>
+                <li><a href="findings.html">Findings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Module Header -->
+        <section class="page-hero module-hero">
+            <div class="container">
+                <!-- Module Navigation -->
+                <nav class="module-tabs" aria-label="Modules">
+                    <a href="ums.html" class="module-tab"><span class="mod-num sm c-ums">01</span>UMS / ERP</a>
+                    <a href="iot.html" class="module-tab"><span class="mod-num sm c-iot">02</span>IoT Hardware</a>
+                    <a href="facilities.html" class="module-tab active" aria-current="page"><span class="mod-num sm c-fac">03</span>Smart Facilities</a>
+                    <a href="network.html" class="module-tab"><span class="mod-num sm c-net">04</span>Network / Dashboard</a>
+                </nav>
+                <div class="module-intro">
+                    <span class="mod-num lg c-fac">03</span>
+                    <div class="stack-sm">
+                        <span class="small muted">Module by <strong>Dhiraj Mourya</strong> · BC2038</span>
+                        <h1 class="page-title">Smart facilities on campus</h1>
+                        <p class="lead">The facilities that support student life at Vishwakarma University, and how they could be monitored safely, with staff always keeping manual control.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities Studied -->
+        <section class="section">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="badge badge-observed">Visit + website review</span>
+                    <h2>Facilities we studied</h2>
+                    <p class="lead">For each area: what we found, where it comes from, and a possible monitoring use from Dhiraj's study.</p>
+                </div>
+                <div class="grid grid-4 gap-sm">
+                    <article class="card compact"><h4>Electricity</h4><p>Generator facility listed for backup power.</p><span class="source">Idea: meter trends and unusual-use alerts</span><span><span class="badge badge-web">From VU website</span></span></article>
+                    <article class="card compact"><h4>Water</h4><p>Rainwater harvesting and wastewater management listed.</p><span class="source">Idea: tank-level warnings with staff inspection</span><span><span class="badge badge-web">From VU website</span></span></article>
+                    <article class="card compact"><h4>Eco Campus</h4><p>"Eco Campus" signage and planting at the entrance; a biological waste disposer is listed.</p><span class="source">Idea: track waste and water-saving results</span><span><span class="badge badge-observed">Seen on visit</span></span></article>
+                    <article class="card compact"><h4>Smart vending</h4><p>Touchscreen vending machine near a building entrance.</p><span class="source">Idea: stock and fault alerts, digital refunds</span><span><span class="badge badge-observed">Seen on visit</span></span></article>
+                    <article class="card compact"><h4>Security / access</h4><p>CCTV dome camera above a building entrance.</p><span class="source">Idea: device-status alerts to security staff</span><span><span class="badge badge-observed">Seen on visit</span></span></article>
+                    <article class="card compact"><h4>Student amenities</h4><p>Wi-Fi, library, cafeteria, hostel, bank and ATMs listed.</p><span class="source">Idea: occupancy and opening-hours information</span><span><span class="badge badge-web">From VU website</span></span></article>
+                    <article class="card compact"><h4>Sports</h4><p>Open gym, badminton, table tennis, basketball, football, cricket and more listed.</p><span class="source">Idea: court booking and usage counts</span><span><span class="badge badge-web">From VU website</span></span></article>
+                    <article class="card compact"><h4>Classrooms, lighting, AC</h4><p>Buildings were seen from outside only; classroom controls were not inspected.</p><span class="source">Idea: timetable-aware lighting with manual switch</span><span><span class="badge badge-example">Our proposal</span></span></article>
+                </div>
+                <span class="source">Source: <a href="https://www.vupune.ac.in/index.php/life-vu" target="_blank" rel="noopener">Life@VU facilities page</a> and our photographs of 16 October 2026.</span>
+            </div>
+        </section>
+
+        <!-- Proposed Automation Flow -->
+        <section class="section section-alt">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="badge badge-example">Our proposal · Example automation flow</span>
+                    <h2>Trigger → Data → Rule → Action → Record → Human control</h2>
+                    <p class="lead">Dhiraj's proposed smart-classroom model. A listed facility does not mean an IoT system is installed, so this is a design idea, not VU's equipment.</p>
+                </div>
+                <div class="grid grid-6">
+                    <div class="auto-step"><span class="circle sm">1</span><span class="label">Trigger</span><strong>Classroom becomes occupied</strong></div>
+                    <div class="auto-step"><span class="circle sm">2</span><span class="label">Data</span><strong>Occupancy sensor detects people</strong></div>
+                    <div class="auto-step"><span class="circle sm">3</span><span class="label">Rule</span><strong>Timetable is checked, with a time delay</strong></div>
+                    <div class="auto-step"><span class="circle sm">4</span><span class="label">Action</span><strong>Lights / AC may activate</strong></div>
+                    <div class="auto-step"><span class="circle sm">5</span><span class="label">Record / Alert</span><strong>Time-stamped status is recorded</strong></div>
+                    <div class="auto-step dark"><span class="circle sm white">6</span><span class="label">Human control</span><strong>Wall switch always overrides</strong></div>
+                </div>
+                <div class="pill-row">
+                    <span class="chip">Timers</span>
+                    <span class="chip">Schedules</span>
+                    <span class="chip">Occupancy sensors</span>
+                    <span class="chip">Thresholds</span>
+                    <span class="chip">Alerts with an owner</span>
+                    <span class="chip">Manual override</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Findings and Suggestions -->
+        <section class="section">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="eyebrow">Findings and suggestions</span>
+                    <h2>From finding to improvement</h2>
+                    <p class="lead">Dhiraj's findings, each with a small, testable improvement.</p>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Finding</th><th>Suggested improvement</th><th>Source</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Facilities need routine oversight (generator, water)</td><td>Start with location-based issue reporting: reported → checked → closed</td><td><span class="badge badge-web">VU website</span></td></tr>
+                            <tr><td>Room use changes with the timetable</td><td>Scheduled, sensor-aware lighting with a manual switch</td><td><span class="badge badge-example">Our proposal</span></td></tr>
+                            <tr><td>Utility levels change (tanks, power)</td><td>Use trends and sensible alert thresholds</td><td><span class="badge badge-example">Our proposal</span></td></tr>
+                            <tr><td>Alerts need clear ownership</td><td>Assign each alert to a person who acknowledges it</td><td><span class="badge badge-example">Our proposal</span></td></tr>
+                            <tr><td>Vending refunds rely on a handwritten phone number</td><td>Automatic refund and fault alert for failed vends</td><td><span class="badge badge-observed">Seen on visit</span></td></tr>
+                            <tr><td>Automatic controls can fail</td><td>Manual override and safe defaults</td><td><span class="badge badge-example">Our proposal</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="split split-even">
+                    <div class="grid grid-2 gap-sm">
+                        <div class="card compact"><h4>Automation observed</h4><p>A touchscreen smart vending machine. No classroom or utility automation was visible from public areas.</p></div>
+                        <div class="card compact"><h4>Manual override</h4><p>Not inspected. The proposed design keeps the wall switch in charge.</p></div>
+                        <div class="card compact"><h4>Alerts and maintenance</h4><p>Not disclosed / Not available. Internal maintenance records were not shared.</p></div>
+                        <div class="card compact"><h4>Practical improvement</h4><p>Begin with a simple issue-reporting dashboard before installing any sensors.</p></div>
+                    </div>
+                    <figure>
+                        <img class="photo tall" src="images/field-visit/eco-campus-sign.jpg" alt="Vishwakarma University sign above green Eco Campus letters">
+                        <figcaption><span class="caption-text">VU Eco Campus signage, 16 October 2026.</span></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-brand">
+                        <span class="brand-mark light">SC</span>
+                        <span>University Management System + IoT: Smart Campus Study</span>
+                    </div>
+                    <p>Second-Year BCA field-work project. Field visit to Vishwakarma University, Kondhwa Budruk, Pune on 16 October 2026.</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">Project guide</span>
+                    <p>Rohini M. Kshirsagar</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">College</span>
+                    <p>Jayawantrao Sawant Institute of Management &amp; Research (JSIMR), Pune</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">Academic year</span>
+                    <p>2026–27 · Batch 2025–2028</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>Harshvardhan Rathod · Dhiraj Mourya · Aaryan Ghadge · Dinesh Choudhary</span>
+                <span>Thank you</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
