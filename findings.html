@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findings — Smart Campus Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">SC</span>
+                <span class="brand-text">
+                    <strong>Smart Campus Study</strong>
+                    <small>UMS + IoT · BCA Field Work</small>
+                </span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="ums.html">Modules</a></li>
+                <li><a href="field-visit.html">Field Visit</a></li>
+                <li><a href="findings.html" class="active" aria-current="page">Findings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-hero">
+            <div class="container">
+                <span class="breadcrumb"><a href="index.html">Home</a> → Findings</span>
+                <span class="eyebrow">Results</span>
+                <h1 class="page-title">Findings and recommendations</h1>
+                <p class="lead">What we found at Vishwakarma University on 16 October 2026, from our campus observations and the university's official website.</p>
+                <span><span class="badge badge-observed">Visit completed · 16 October 2026</span></span>
+            </div>
+        </section>
+
+        <!-- Findings -->
+        <section class="section">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="eyebrow">Findings</span>
+                    <h2>What the field visit showed</h2>
+                    <p class="lead">Grouped into five headings. Each finding names its source and module.</p>
+                </div>
+                <div class="grid grid-3">
+                    <article class="card">
+                        <div class="card-top"><span class="circle">1</span><span class="badge badge-observed">Seen on visit</span></div>
+                        <h3>What we observed</h3>
+                        <ul class="fact-list">
+                            <li>VU branding and "Eco Campus" signage at the Kondhwa Budruk campus.</li>
+                            <li>A white dome CCTV camera mounted above a building entrance. <span class="source">(04 Network)</span></li>
+                            <li>A touchscreen smart vending machine with an antenna on top, near a building entrance. <span class="source">(02 IoT, 03 Facilities)</span></li>
+                            <li>Maintained campus roads, buildings and boundary walls shared with VIT Pune (Kondhwa Campus).</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-top"><span class="circle">2</span><span class="badge badge-web">From VU website</span></div>
+                        <h3>What works well</h3>
+                        <ul class="fact-list">
+                            <li>Student services are published clearly: academic calendar, circulars and notices, results and VUNET registration. <span class="source">(01 UMS)</span></li>
+                            <li>The bonafide certificate application "is now available on your ERP", a working self-service example. <span class="source">(01 UMS)</span></li>
+                            <li>Campus support listed: Wi-Fi, library, cafeteria, generator facility, rainwater harvesting and wastewater management. <span class="source">(03 Facilities)</span></li>
+                            <li>The library offers Wi-Fi, a Web-OPAC catalogue and "Bio-metric Entry and Exit for library users". <span class="source">(02 IoT, 04 Network)</span></li>
+                            <li>Published IT policies for Wi-Fi use and password management. <span class="source">(04 Network)</span></li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-top"><span class="circle">3</span><span class="badge badge-web">VU website + visit</span></div>
+                        <h3>Manual / repetitive processes</h3>
+                        <ul class="fact-list">
+                            <li>Most student requests are still downloadable forms: migration, transfer, character certificate, LOR, duplicate ID card, fee structure and no dues. <span class="source">(01 UMS)</span></li>
+                            <li>The vending machine shows a handwritten refund contact number, so refunds appear to be handled manually by phone. <span class="source">(Seen on visit · 02 IoT)</span></li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-top"><span class="circle">4</span><span class="badge badge-web">VU website + visit</span></div>
+                        <h3>Problems / gaps</h3>
+                        <ul class="fact-list">
+                            <li>Student services are spread across separate portals: VUNET, the admission portal, the grievance portal and the ERP. <span class="source">(04 Network)</span></li>
+                            <li>Visitors cannot tell whether devices such as the CCTV camera or the vending machine report to any shared dashboard. <span class="source">(02 IoT, 04 Network)</span></li>
+                            <li>A listed facility (for example rainwater harvesting) does not show whether it is monitored. <span class="source">(03 Facilities)</span></li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="card-top"><span class="circle blue">5</span><span class="badge badge-example">Our proposal</span></div>
+                        <h3>Improvement opportunities</h3>
+                        <ul class="fact-list">
+                            <li>Move more standard forms into ERP self-service with request tracking.</li>
+                            <li>A single student entry point linking VUNET, ERP, notices and grievances.</li>
+                            <li>A simple facility issue-reporting process before adding sensors.</li>
+                            <li>A device register with location and last-seen time, showing "unavailable" instead of a false zero.</li>
+                        </ul>
+                    </article>
+                    <article class="card plain" style="justify-content: center;">
+                        <h4>How to read a finding</h4>
+                        <p>Each finding shows where it comes from: something we saw on campus, something the university publishes, or our own proposal.</p>
+                        <div class="chip-list"><span class="badge badge-observed">Seen on visit</span><span class="badge badge-web">From VU website</span><span class="badge badge-example">Our proposal</span></div>
+                        <p class="small">Internal systems, readings and network details were not available to visitors and are not claimed here.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations -->
+        <section class="section section-alt">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="eyebrow">Recommendations</span>
+                    <h2>What we suggest</h2>
+                    <p class="lead">One recommendation per module. Each links a problem to a practical improvement and its expected benefit.</p>
+                </div>
+                <div class="grid grid-2">
+                    <article class="card">
+                        <div class="card-top"><span class="eyebrow">Recommendation 1</span><span class="badge c-ums">01 UMS / ERP</span></div>
+                        <h3>Expand ERP self-service for student requests</h3>
+                        <div class="rec-table">
+                            <div class="rec-row"><span class="label">Problem</span><span>Only the bonafide certificate is on the ERP; other requests are downloadable forms.</span></div>
+                            <div class="rec-row"><span class="label">Suggested improvement</span><span>Move common forms into the ERP with a request reference and status (submitted, in review, ready).</span></div>
+                            <div class="rec-row"><span class="label">Expected benefit</span><span>Less repeated data entry and clear status tracking for students.</span></div>
+                        </div>
+                        <span class="small muted">Proposed by Harshvardhan Rathod</span>
+                    </article>
+                    <article class="card">
+                        <div class="card-top"><span class="eyebrow">Recommendation 2</span><span class="badge c-fac">03 Smart Facilities</span></div>
+                        <h3>Start with a facility issue-reporting dashboard</h3>
+                        <div class="rec-table">
+                            <div class="rec-row"><span class="label">Problem</span><span>Facilities such as the generator and water systems are listed, but their monitoring is not visible.</span></div>
+                            <div class="rec-row"><span class="label">Suggested improvement</span><span>A simple reported → checked → closed process by building and room, with alerts assigned to a responsible person.</span></div>
+                            <div class="rec-row"><span class="label">Expected benefit</span><span>Faster, accountable maintenance, even before installing sensors.</span></div>
+                        </div>
+                        <span class="small muted">Proposed by Dhiraj Mourya</span>
+                    </article>
+                    <article class="card">
+                        <div class="card-top"><span class="eyebrow">Recommendation 3</span><span class="badge c-net">04 Network / Dashboard</span></div>
+                        <h3>Role-based views and visible service status</h3>
+                        <div class="rec-table">
+                            <div class="rec-row"><span class="label">Problem</span><span>Public notices and private student records need different access, and service failures are hard to tell apart.</span></div>
+                            <div class="rec-row"><span class="label">Suggested improvement</span><span>Separate student, faculty and admin views, plus an authorised status dashboard with timestamps and an alert owner.</span></div>
+                            <div class="rec-row"><span class="label">Expected benefit</span><span>Private data stays private, and staff can quickly tell a denied login from an outage.</span></div>
+                        </div>
+                        <span class="small muted">Proposed by Aaryan Ghadge</span>
+                    </article>
+                    <article class="card">
+                        <div class="card-top"><span class="eyebrow">Recommendation 4</span><span class="badge c-iot">02 IoT Hardware</span></div>
+                        <h3>Keep a device register and test in stages</h3>
+                        <div class="rec-table">
+                            <div class="rec-row"><span class="label">Problem</span><span>Faults can hide in the sensor, controller or gateway, and a dead device can look like a zero reading.</span></div>
+                            <div class="rec-row"><span class="label">Suggested improvement</span><span>A device list with ID, location and last-seen time; test the data path one stage at a time.</span></div>
+                            <div class="rec-row"><span class="label">Expected benefit</span><span>Faster fault-finding, and readings users can trust.</span></div>
+                        </div>
+                        <span class="small muted">Proposed by Dinesh Choudhary</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Outcomes -->
+        <section class="section">
+            <div class="container stack">
+                <div class="section-header">
+                    <span class="eyebrow">Learning outcomes</span>
+                    <h2>What each of us learned</h2>
+                </div>
+                <div class="grid grid-4">
+                    <article class="card">
+                        <span class="mod-num c-ums">01</span>
+                        <h3>Harshvardhan Rathod</h3>
+                        <span><span class="badge c-ums">UMS / ERP</span></span>
+                        <span class="label">Main learning</span>
+                        <p>A UMS / ERP is more than marks and attendance. It must link identity, notices, requests and results. I also learned to keep what I saw separate from what I inferred.</p>
+                    </article>
+                    <article class="card">
+                        <span class="mod-num c-iot">02</span>
+                        <h3>Dinesh Choudhary</h3>
+                        <span><span class="badge c-iot">IoT Hardware</span></span>
+                        <span class="label">Main learning</span>
+                        <p>A successful sensor reading is only the beginning. The controller must label it, the connection must deliver it, and the application must spot stale or missing data.</p>
+                    </article>
+                    <article class="card">
+                        <span class="mod-num c-fac">03</span>
+                        <h3>Dhiraj Mourya</h3>
+                        <span><span class="badge c-fac">Smart Facilities</span></span>
+                        <span class="label">Main learning</span>
+                        <p>Useful automation is about reliability, safety and responsibility. A simple alert with a clear owner helps more than a complex system nobody checks.</p>
+                    </article>
+                    <article class="card">
+                        <span class="mod-num c-net">04</span>
+                        <h3>Aaryan Ghadge</h3>
+                        <span><span class="badge c-net" style="white-space: normal;">Network / Dashboard</span></span>
+                        <span class="label">Main learning</span>
+                        <p>Public information, student records and operational alerts need different levels of access. Security should be designed in from the beginning, not added later.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Acknowledgement -->
+        <section class="section section-tint">
+            <div class="container thanks">
+                <span class="eyebrow">Acknowledgement</span>
+                <h2 style="font-size: 48px; line-height: 56px; font-weight: 800;">Thank You</h2>
+                <p class="lead">We thank Dr. C. D. Hake, Director of Jayawantrao Sawant Institute of Management &amp; Research, our Head of Department, and our project guide Prof. Rohini M. Kshirsagar for their guidance. We also thank Vishwakarma University, Kondhwa Budruk, Pune for the campus setting of our study.</p>
+                <div class="thanks-details">
+                    <div><span class="label">Project</span><strong>University Management System + IoT: Smart Campus Study</strong></div>
+                    <div><span class="label">Project guide</span><strong>Prof. Rohini M. Kshirsagar</strong></div>
+                    <div><span class="label">College</span><strong>Jayawantrao Sawant Institute of Management &amp; Research (JSIMR), Pune</strong></div>
+                    <div><span class="label">Field visit</span><strong>Vishwakarma University, Pune · 16 October 2026</strong></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-brand">
+                        <span class="brand-mark light">SC</span>
+                        <span>University Management System + IoT: Smart Campus Study</span>
+                    </div>
+                    <p>Second-Year BCA field-work project. Field visit to Vishwakarma University, Kondhwa Budruk, Pune on 16 October 2026.</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">Project guide</span>
+                    <p>Rohini M. Kshirsagar</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">College</span>
+                    <p>Jayawantrao Sawant Institute of Management &amp; Research (JSIMR), Pune</p>
+                </div>
+                <div class="footer-item">
+                    <span class="label">Academic year</span>
+                    <p>2026–27 · Batch 2025–2028</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>Harshvardhan Rathod · Dhiraj Mourya · Aaryan Ghadge · Dinesh Choudhary</span>
+                <span>Thank you</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
