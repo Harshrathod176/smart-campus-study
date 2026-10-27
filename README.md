@@ -73,6 +73,10 @@ The website includes:
 **University:** Savitribai Phule Pune University  
 **Academic Year:** 2025–2028
 
+## Live Website
+
+https://harshrathod176.github.io/smart-campus-study/
+
 ---
 
 This repository contains the academic website developed for the **University Management System + IoT: Smart Campus Study** field-work project.
